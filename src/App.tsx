@@ -6,39 +6,45 @@ import {
 
 import CustomMenu from './components/Menu'
 
-const { useBreakpoint } = Grid;
-
 const { Header, Content, Footer, Sider } = Layout;
 
 
 const App: React.FC = () => {
-  const screens = useBreakpoint();
-  const showTrigger = screens.lg
-  const [collapse, setCollapse] = useState(showTrigger)
+  const [collapse, setCollapse] = useState(true)
+  const hideTrigger = Grid.useBreakpoint().lg
+  const trigger = (broken) => {
+    setCollapse(broken)
+  }
   return (
     <Layout style={{height: "100vh"}}>
       <Sider
         breakpoint="lg"
         trigger={null}
         collapsible
-        collapsedWidth="0"
+        theme="light"
+        collapsedWidth={!hideTrigger ? '0' : '79'}
         collapsed={collapse}
-        onBreakpoint={() => setCollapse(!collapse)}
+        onBreakpoint={trigger}
       >
         <CustomMenu collapse={collapse}/>
+        <div>
+          {
+            hideTrigger && React.createElement(MenuUnfoldOutlined,{
+              onClick: () => setCollapse(!collapse || false)
+            })
+          }
+        </div>
       </Sider>
       <Layout>
-        <Header style={{ padding: 0 }}>
+        <Header style={{ padding: "0 24px", background: "white" }}>
           {
-            showTrigger && React.createElement(MenuUnfoldOutlined,{
+            !hideTrigger && React.createElement(MenuUnfoldOutlined,{
               onClick: () => setCollapse(!collapse)
             })
           }
         </Header>
-        <Content style={{ margin: "24px 16px 0" }}>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+        <Content style={{ margin: "24px" }}>
             content
-          </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>ts-react ©2021 Created by 呆呆酱</Footer>
       </Layout>

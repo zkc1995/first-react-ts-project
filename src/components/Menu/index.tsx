@@ -9,7 +9,7 @@ interface IChildProps {
 const CustomMenu: React.FC<IChildProps> = (props) => {
   const { collapse } = props
   return (
-    <Menu theme="dark" mode="inline" inlineCollapsed={collapse} defaultSelectedKeys={['4']}>
+    <Menu mode="inline" inlineCollapsed={collapse} defaultSelectedKeys={['4']}>
       <Menu.Item key="1">
         nav 1
       </Menu.Item>

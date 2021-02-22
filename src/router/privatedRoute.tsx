@@ -4,7 +4,6 @@ import { Redirect, Route } from 'react-router-dom';
 import { RouteOption } from './routes';
 
 const PrivatedRoute: React.FC<RouteOption> = (props) => {
-
   const { path, component: Component, routes } = props;
   const TOKEN = '';
 

@@ -14,20 +14,25 @@ export interface RouteOption {
 
 const routes: RouteOption[] = [
   {
+    path: '/sign',
+    component: Sign
+  },
+  {
     path: '/',
     component: Layout,
     routes: [
+      {
+        path: '/',
+        redirect: '/home',
+        exact: true
+      },
       {
         path: '/home',
         component: Home,
         privated: true
       }
     ]
-  },
-  {
-    path: '/sign',
-    component: Sign
-  } 
+  }
 ];
 
 export default routes;

@@ -24,6 +24,7 @@ const App: React.FC<LayoutProps> = (props) => {
     setCollapse(broken);
   };
 
+  console.log('test');
   return (
     <Layout style={{ height: '100vh' }}>
       <Sider

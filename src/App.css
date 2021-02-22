@@ -1,4 +1,16 @@
 .logo {
   height: 64px;
-  background: #666;
+  background: #f0f2f5;
+}
+.app-sider {
+  position: relative;
+}
+
+.app-menu-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  font-size: 18px;
 }

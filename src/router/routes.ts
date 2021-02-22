@@ -1,6 +1,8 @@
 import Layout from '../Layout';
 import Home from '../pages/Home';
 import Sign from '../pages/Sign';
+import Work from '../pages/Work';
+import Property from '../pages/Property';
 
 // 给路由定义类型接口
 export interface RouteOption {
@@ -30,7 +32,17 @@ const routes: RouteOption[] = [
         path: '/home',
         component: Home,
         privated: true
-      }
+      },
+      {
+        path: '/work',
+        component: Work,
+        privated: true
+      },
+      {
+        path: '/property',
+        component: Property,
+        privated: true
+      },
     ]
   }
 ];

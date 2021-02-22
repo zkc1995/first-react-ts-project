@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Layout } from 'antd';
-import { MenuUnfoldOutlined } from '@ant-design/icons';
+import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 
 import CustomMenu from '../components/Menu';
 import { renderRoute } from '../router';
@@ -25,21 +25,22 @@ const App: React.FC<LayoutProps> = (props) => {
   };
 
   return (
-    <Layout style={{ height: '100vh' }}>
+    <Layout style={{ minHeight: '100vh' }}>
       <Sider
         breakpoint="lg"
         trigger={null}
         collapsible
         theme="light"
+        className="app-sider"
         collapsedWidth={!hideTrigger ? '0' : '79'}
         collapsed={collapse}
         onBreakpoint={trigger}
       >
         <div className="logo"></div>
         <CustomMenu collapse={collapse} />
-        <div>
+        <div className="app-menu-bottom">
           {hideTrigger &&
-            React.createElement(MenuUnfoldOutlined, {
+            React.createElement(collapse ? MenuUnfoldOutlined : MenuFoldOutlined, {
               onClick: () => setCollapse(!collapse || false),
             })}
         </div>

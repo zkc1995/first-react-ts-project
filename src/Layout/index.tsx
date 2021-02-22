@@ -21,11 +21,9 @@ const App: React.FC<LayoutProps> = (props) => {
   const hideTrigger = Grid.useBreakpoint().lg;
 
   const trigger = (broken: boolean) => {
-    console.log(broken);
     setCollapse(broken);
   };
 
-  console.log('test');
   return (
     <Layout style={{ height: '100vh' }}>
       <Sider

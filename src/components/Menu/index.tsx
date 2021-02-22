@@ -12,7 +12,7 @@ interface IChildProps {
 const CustomMenu: React.FC<IChildProps> = (props) => {
   const { location } = props;
   return (
-    <Menu mode="inline" defaultSelectedKeys={[location.pathname]}>
+    <Menu mode="inline" selectedKeys={[location.pathname]} defaultSelectedKeys={[location.pathname]}>
       <Menu.Item key="/home">
         <Link to="/home">
           首页

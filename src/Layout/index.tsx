@@ -21,6 +21,7 @@ const App: React.FC<LayoutProps> = (props) => {
   const hideTrigger = Grid.useBreakpoint().lg;
 
   const trigger = (broken: boolean) => {
+    console.log(broken);
     setCollapse(broken);
   };
 

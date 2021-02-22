@@ -10,9 +10,9 @@ interface IChildProps {
 }
 
 const CustomMenu: React.FC<IChildProps> = (props) => {
-  const { collapse, location } = props;
+  const { location } = props;
   return (
-    <Menu mode="inline" inlineCollapsed={collapse} defaultSelectedKeys={[location.pathname]}>
+    <Menu mode="inline" defaultSelectedKeys={[location.pathname]}>
       <Menu.Item key="/home">
         <Link to="/home">
           首页

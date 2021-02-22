@@ -1,0 +1,11 @@
+.sign-container {
+  width: 400px;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-btn {
+  text-align: center;
+}

@@ -4,7 +4,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 
 import CustomMenu from '../components/Menu';
 import { renderRoute } from '../router';
-import '../App.less';
+import '../less/App.less';
 
 import type { RouteOption } from '../router';
 

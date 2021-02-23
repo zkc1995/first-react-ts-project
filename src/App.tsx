@@ -1,7 +1,7 @@
 import React from 'react';
 import { routes, renderRoute } from './router';
 
-import './App.less';
+import './less/App.less';
 
 const App: React.FC = () => {
   return (

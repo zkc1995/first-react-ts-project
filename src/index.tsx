@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
+import 'antd/dist/antd.less';
 
 import App from './App';
-
-import 'antd/dist/antd.css';
 
 ReactDOM.render(
   // <React.StrictMode>

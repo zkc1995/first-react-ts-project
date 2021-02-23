@@ -48,5 +48,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 
-预计会做的内容：
-1. 登陆，权限菜单
+
+### 配置less
+[这里用的是antd官网推荐的less](https://ant.design/docs/react/use-with-create-react-app-cn)

@@ -1,45 +1,47 @@
 import React from 'react';
-import { Table } from 'antd';
+import { Table, Space } from 'antd';
 import BaseContent from '../../components/BaseContent';
 
 const Property: React.FC = () => {
   const columns = [
     {
-      title: 'Name',
-      dataIndex: 'name',
+      title: '月份',
+      dataIndex: 'month',
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
+      title: '收入',
+      dataIndex: 'income',
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
+      title: '支出',
+      dataIndex: 'pay',
     },
   ];
   const data = [
     {
       key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
+      month: '1月',
+      income: 4000,
+      pay: 10000,
     },
     {
       key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
+      month: '2月',
+      income: 4000,
+      pay: 10000,
     },
     {
       key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
+      month: '3月',
+      income: 4000,
+      pay: 10000,
     },
   ];
 
   return (
     <BaseContent title="财产">
+      <Space>
+      </Space>
       <Table columns={columns} dataSource={data} size="middle" />
     </BaseContent>
     

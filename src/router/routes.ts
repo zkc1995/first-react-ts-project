@@ -3,6 +3,7 @@ import Home from '../pages/Home';
 import Sign from '../pages/Sign';
 import Work from '../pages/Work';
 import Property from '../pages/Property';
+import Learnings from '../pages/Learnings';
 
 // 给路由定义类型接口
 export interface RouteOption {
@@ -42,6 +43,10 @@ const routes: RouteOption[] = [
         path: '/property',
         component: Property,
         privated: true
+      },
+      {
+        path: '/learnings',
+        component: Learnings
       },
     ]
   }

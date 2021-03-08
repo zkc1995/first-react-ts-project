@@ -30,6 +30,11 @@ const CustomMenu: React.FC<IChildProps> = (props) => {
           财产管理
         </Link>
       </Menu.Item>
+      <Menu.Item key="/learnings" icon={<AccountBookOutlined />}>
+        <Link to="/learnings">
+          学习
+        </Link>
+      </Menu.Item>
     </Menu>
   );
 };

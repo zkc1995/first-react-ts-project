@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { ForUseState, ForUseEffect, ForUseCallback, ForUseMemo } from './components';
+import { ForUseState, ForUseEffect, ForUseCallback, ForUseMemo, ForUseRef } from './components';
 import { Card } from 'antd';
 import './index.less';
 
 const Learnings: React.FC = () => {
-  const [current, setCurrent] = useState<string>('ForUseMemo');
+  const [current, setCurrent] = useState<string>('ForUseRef');
 
   const contentList = { 
     ForUseState: <ForUseState />,
     ForUseEffect: <ForUseEffect />,
     ForUseCallback: <ForUseCallback />,
     ForUseMemo: <ForUseMemo />,
+    ForUseRef: <ForUseRef />,
   };
 
   const tabList = Object.keys(contentList).map(v => {

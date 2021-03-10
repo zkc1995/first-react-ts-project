@@ -26,7 +26,7 @@ const ForUseState: React.FC = () => {
   const [count, setCount] = useState(initialState);
 
   return (
-    <div className="bottom-line">
+    <div>
       <h3>关于useState的学习</h3>
 
       Count：{count}&nbsp;

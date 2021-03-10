@@ -33,7 +33,7 @@ const ForUseEffect: React.FC = () => {
   // }, [hasChange, higher]);
 
   return (
-    <div className="bottom-line">
+    <div>
       <h3>关于useEffect的学习</h3>
       <div>
         我{ hasChange ? '变了' : '没变' }&nbsp;

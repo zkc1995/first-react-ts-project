@@ -23,11 +23,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "craco start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "craco start"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
